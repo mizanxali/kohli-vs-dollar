@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kohli-vs-dollar",
+  "main": "worker/index.ts",
+  "compatibility_date": "2025-07-01",
+  "routes": [
+    { "pattern": "kohlivsthedollar.fun", "custom_domain": true }
+  ],
+  "assets": {
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "POLL_COUNTER",
+        "class_name": "PollCounter"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["PollCounter"]
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

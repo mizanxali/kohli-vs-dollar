@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* Design tokens ported from the Pinitia UI: a lighter neobrutalism -
+   warm pale-yellow cream, orange/yellow accents, 2px borders, 0.25rem
+   radius, and soft 4px hard-shadows. */
+@theme {
+  --color-cream: hsl(51 100% 96%); /* page + card background */
+  --color-ink: hsl(0 0% 0%); /* foreground + borders */
+  --color-primary: hsl(30 100% 55%); /* orange */
+  --color-secondary: hsl(50 100% 75%); /* soft yellow */
+  --color-main: hsl(50 100% 85%); /* light yellow */
+  --color-muted: hsl(50 50% 90%);
+  --color-muted-foreground: hsl(0 0% 40%);
+  --color-accent: hsl(30 100% 65%);
+  --color-destructive: hsl(0 84% 60%);
+
+  /* Two "teams" racing to 100 - validated colorblind-safe (deutan ΔE 29). */
+  --color-kohli: #4f83e3;
+  --color-dollar: #159e5b;
+
+  --font-display: "Unbounded", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-neo: 0.25rem;
+
+  --shadow-neo: 4px 4px 0 0 rgba(0, 0, 0, 1);
+  --shadow-neo-sm: 2px 2px 0 0 rgba(0, 0, 0, 1);
+  --shadow-neo-lg: 6px 6px 0 0 rgba(0, 0, 0, 1);
+  --shadow-neo-pressed: 1px 1px 0 0 rgba(0, 0, 0, 1);
+}
+
+@utility neo-press {
+  transform: translate(3px, 3px);
+  box-shadow: var(--shadow-neo-pressed);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

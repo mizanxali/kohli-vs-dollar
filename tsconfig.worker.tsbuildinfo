@@ -1,0 +1,1 @@
+{"version":"7.0.2","root":["./worker/index.ts"],"packageJsons":["./package.json"],"missingPackageJsons":["./node_modules/@types/worker-configuration.d.ts/package.json"]}
