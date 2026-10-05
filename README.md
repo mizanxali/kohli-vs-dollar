@@ -2,7 +2,7 @@
 
 A fun, single-page site tracking two numbers racing toward 100:
 
-- **Kohli** - Virat Kohli's international centuries (hardcoded from public records; 85 and counting)
+- **Kohli** - Virat Kohli's international centuries (hardcoded from public records; 86 and counting)
 - **Dollar** - the price of 1 USD in INR (live from the [Frankfurter API](https://frankfurter.dev), ECB reference rates)
 
 Both are climbing the same 0–100 scale - who reaches 100 first? Below the chart,

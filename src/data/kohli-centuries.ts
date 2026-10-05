@@ -1,6 +1,6 @@
 // Virat Kohli's international centuries (Test, ODI, T20I).
 // Source: Wikipedia "List of international cricket centuries by Virat Kohli",
-// verified July 2026. Count: 30 Test + 54 ODI + 1 T20I = 85 international tons,
+// verified October 2026. Count: 30 Test + 55 ODI + 1 T20I = 86 international tons,
 // second only to Sachin Tendulkar's 100. He retired from Tests (May 2025) and
 // T20Is (2024), so only the ODI tally can still grow toward 100.
 
@@ -101,6 +101,7 @@ export const CENTURIES: Century[] = [
   { date: "2025-11-30", format: "ODI", score: 135, opponent: "South Africa" },
   { date: "2025-12-03", format: "ODI", score: 102, opponent: "South Africa" },
   { date: "2026-01-18", format: "ODI", score: 124, opponent: "New Zealand" },
+  { date: "2026-09-27", format: "ODI", score: 139, opponent: "West Indies" },
 ];
 
 export const CENTURY_COUNT = CENTURIES.length;
